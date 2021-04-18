@@ -1,0 +1,90 @@
+{
+    "workbench.colorTheme": "Just Black",
+    "editor.fontFamily": "Comic Mono, Cascadia Code",
+    "editor.fontSize": 15,
+    "editor.lineHeight": 20,
+    "editor.letterSpacing": 0,
+    "editor.fontWeight": "normal",
+    "files.trimTrailingWhitespace": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 3,
+    "editor.cursorBlinking": "solid",
+    "editor.renderWhitespace": "all",
+    "files.autoSave": "afterDelay",
+    "editor.mouseWheelZoom": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "remimarsal.prettier-now"
+    },
+    // "vim": {
+    //     "vim.enableNeovim" : true,
+    // },
+    //"vscode-neovim.neovimPath" : "C:/Users/donov4n/scoop/apps/neovim-nightly/current/bin/nvim-qt.exe",
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": true,
+    "json.schemas": [
+
+    ],
+    "vscode-neovim.neovimExecutablePaths.win32" : "C:/Users/donov4n/scoop/shims/nvim.exe",
+   //"vscode-neovim.neovimExecutablePaths.win32" : "C:/Users/donov4n/scoop/shims/nvim-qt.exe",
+    "launch": {
+
+
+
+
+
+        "configurations": [],
+        "compounds": []
+    },
+    // "vscode-neovim.neovimPath": "C:\\Neovim\\bin\\nvim.exe",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+    ],
+    "files.associations": {
+        "*.js": "javascript",
+        "*.html": "html",
+        "*.css": "css"
+    },
+    "python.defaultInterpreterPath": "C:\\Users\\donov4n\\.virtualenvs\\djrea-CM-SvC9O\\Scripts\\python.exe",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "vscode-neovim.highlightGroups.highlights": {
+
+        "Directory": "vim",
+        "IncSearch": {
+            "backgroundColor": "theme.editor.findMatchBackground",
+            "borderColor": "theme.editor.findMatchBorder"
+        },
+        "Search": {
+            "backgroundColor": "theme.editor.findMatchHighlightBackground",
+            "borderColor": "theme.editor.findMatchHighlightBorder"
+        },
+        "Visual": {
+            "backgroundColor": "theme.editor.selectionBackground"
+        },
+        "Conceal": "vim",
+        "Substitute": "vim"
+    },
+    "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+     {
+         "before": ["j", "j"],
+         "after": ["<esc>"]
+     }
+    ],
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Microsoft",
+    "explorer.confirmDelete": false,
+}
