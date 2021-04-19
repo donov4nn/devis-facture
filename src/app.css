@@ -53,7 +53,7 @@ a {
 }
 
 .pushable {
-  background: hsla(229, 50%, 50%, 0.59);
+  background: hsla(230, 62%, 50%, 0.59);
   border-radius: 12px;
   border: none;
   padding: 0;
@@ -62,10 +62,10 @@ a {
 }
 .front {
   display: block;
-  padding: 12px 42px;
-  border-radius: 12px;
-  font-size: 1.25rem;
-  background: hsla(229, 50%, 50%, 0.99);
+  padding: .2rem .8rem;
+  border-radius: .5rem;
+  font-size: 1.1rem;
+  background: hsla(219, 57%, 78%, 0.99);
   color: white;
   transform: translateY(-6px);
 }

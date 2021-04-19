@@ -27,12 +27,16 @@
     <p class="wd50">Valable {validityPeriod}</p>
     <p class="wd100">{note}</p>
 </div>
+
 <style>
     .customer {
-        padding : 5rem;
+        padding : 4.5rem;
     }
     .projectInfo {
         padding-bottom: 2rem;
+    }
+    .projectInfo p:nth-child(2) {
+        padding-left: 4.5rem;
     }
     .infos p:first-of-type {
         font-weight: 700;

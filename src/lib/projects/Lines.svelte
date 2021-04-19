@@ -28,7 +28,6 @@
         </tbody>
     </table>
     <div class="ajouterLigne wd100">
-        ajout ligne
     </div>
     <div class="wd100 totalWrapper">
         <div class="total flexRowWrap">

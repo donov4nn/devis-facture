@@ -1,34 +1,40 @@
 <script>
+    import { fade } from 'svelte/transition'
     import {project} from '$lib/stores/project.js'
+
     let displayForm = false
+
     function handleChange (i) {
         $project.lines.payementMethods[i].active = !$project.lines.payementMethods[i].active
         console.log($project.lines.payementMethods)
     }
+
     function handleClick () {
         displayForm = !displayForm
+    }
+
+    function formatPayement(items) {
+        const actives = items.filter(item => item.active)
+        const str = actives.length > 0 ? 'Paiement par ' : ''
+        const lastIndex = actives.length - 1
+        return str + actives.map((item, index) =>  index !== lastIndex ? `${item.libelle} ou par ` : item.libelle).join('')
     }
 </script>
 
 <div class="moyenPaiement" on:click={handleClick}>
-    <p>
-        {#if $project.lines.payementMethods.filter(e => e.active).length > 0}
-            Paiement par
-        {/if}
-      {#each $project.lines.payementMethods as item, i}
-           {item.active && i < $project.lines.payementMethods.filter(e => e.active).length - 1
-                ? item.libelle + ' ou par '
-                : item.active ? item.libelle : ''}
-      {/each}
-      </p>
+    {#key $project.lines.payementMethods}
+        <p in:fade>
+            {formatPayement($project.lines.payementMethods)}
+        </p>
+    {/key}
 </div>
 <form class="flexRowWrap" style="display : {displayForm ? 'flex' : 'none'}">
     {#each $project.lines.payementMethods as item, i}
-    <div>
-        <label for={i} class="flexRowWrap" ><p class="wd50">{item.libelle}</p>
-            <input class="wd50" id={i} on:change={() => handleChange(i)} type="checkbox" checked={$project.lines.payementMethods[i].active} >
-        </label>
-    </div>
+        <div>
+            <label for={i} class="flexRowWrap" ><p class="wd50">{item.libelle}</p>
+                <input class="wd50" id={i} on:change={() => handleChange(i)} type="checkbox" checked={$project.lines.payementMethods[i].active} >
+            </label>
+        </div>
     {/each}
 </form>
 

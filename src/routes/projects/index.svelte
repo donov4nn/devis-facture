@@ -1,14 +1,10 @@
 <script>
     import Project from '$lib/projects/Project.svelte'
     import { project } from '$lib/stores/project.js'
-    import html2canvas from 'html2canvas'
-    import { jsPDF } from 'jspdf'
+    import { projectToPdf } from '$lib/common/pdfService.js'
 
     async function handleClick () {
-        const canvas = await html2canvas(document.querySelector('.project'), {scale:'5'})
-        const pdf = new jsPDF({format:'A4'})
-        pdf.addImage(canvas, 'JPEG', 5, 5, 200, 285)
-        pdf.save('project.pdf')
+        projectToPdf(document.querySelector('.project'))
     }
 </script>
 
